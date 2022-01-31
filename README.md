@@ -29,3 +29,49 @@ Práce ve VSC
 Otevřu složku ve VSC<br>
 ![image](https://user-images.githubusercontent.com/90755554/151771242-05affea3-25d4-4e22-b262-bd812716ef84.png)
 
+![image](https://user-images.githubusercontent.com/90755554/151772681-9ce31d01-b1c8-44c0-bfa3-450077a273ff.png)
+
+Important imports - React
+```
+import React from "react";
+import ReactDom from "react-dom";
+import "./index.css";
+```
+Cookie clicker via ReactJS
+---
+
+```
+import React from "react";
+import ReactDom from "react-dom";
+import "./index.css";
+
+class App extends React.Component {
+
+  state = {
+    cookies: 0
+  }
+
+  updateCookies = () => {
+    let { cookies } = this.state;
+
+    this.setState({
+      cookies: ++cookies
+    });
+  }
+
+  render() {
+    let { cookies } = this.state;
+
+    return (
+      <div className = "container">
+      <img id="cookie" src="/cookie.png" alt="cookie.png" onClick={this.updateCookies}/>
+      <p id="info">Cookies: {cookies}</p>
+      </div>
+    )
+  }
+
+}
+
+ReactDom.render(<App />, document.getElementById("root"));
+
+```
