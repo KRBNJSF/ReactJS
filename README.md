@@ -112,14 +112,18 @@ const App = () => {
 
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
-<br>
+
 ```
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 
 const App = () => {
   const [cookies, updateCookies] = useState(0);
+
+  useEffect(() => {
+    document.title = `You clicked ${cookies} times`;
+  })
 
   return (
     <div className = "container">
