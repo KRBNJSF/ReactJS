@@ -75,3 +75,59 @@ class App extends React.Component {
 ReactDom.render(<App />, document.getElementById("root"));
 
 ```
+public -> uživatel<br>
+src -> naše pracovní soubory
+
+ReactJS - Hooks
+---
+
+<a href="https://medium.com/@ralph1786/intro-to-react-component-lifecycle-ac52bf6340c">React lifecycle</a>
+
+
+<a href="https://reactjs.org/docs/hooks-intro.html">React hooks</a>
+
+<b>Cookie clicker via hooks</b>
+
+Nodejs ->
+
+mkdir [name]<br>
+cd name<br>
+yarn create react-app my-app<br>
+cd my-app<br>
+yarn start<br>
+
+IDE -> 
+
+![image](https://user-images.githubusercontent.com/90755554/151941615-d31b296a-f096-495b-a940-59e834a9b70b.png)<br>
+
+Základ:
+```
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+
+const App = () => {
+  
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
+<br>
+```
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+
+const App = () => {
+  const [cookies, updateCookies] = useState(0);
+
+  return (
+    <div className = "container">
+      <img id="cookie" src="/cookie.png" alt="cookie.png" onClick={() => updateCookies(cookies + 1)}/>
+      <p id="info">Cookies: {cookies}</p>
+      </div>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
+```
