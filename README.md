@@ -186,13 +186,13 @@ export default Article;
 Code production
 ---
 
-<b>yarn build</b>
+- <b>yarn build</b>
 
-<b>yarn global add serve</b>
+- <b>yarn global add serve</b>
 
-<b>npm i -g serve</b>
+- <b>npm i -g serve</b>
 
-<b>serve -s build</b>
+- <b>serve -s build</b>
 
 ![image](https://user-images.githubusercontent.com/90755554/152959409-4a1a217a-1e31-4ead-83b6-23e9040bb910.png)
 
